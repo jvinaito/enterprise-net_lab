@@ -1,0 +1,161 @@
+hostname DSW2
+!
+!
+no profinet
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode active
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode active
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/12
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/13
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description TO_HQ_R1
+ no switchport
+ ip address 10.1.2.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 0004.9a4d.7d01
+ ip address 192.168.10.3 255.255.255.0
+ ip helper-address 192.168.10.2
+ standby 10 ip 192.168.10.1
+ standby 10 priority 90
+!
+interface Vlan60
+ mac-address 0004.9a4d.7d02
+ ip address 192.168.60.3 255.255.255.0
+ ip helper-address 192.168.60.2
+ standby 60 ip 192.168.60.1
+ standby 60 priority 110
+ standby 60 preempt
+!
+interface Vlan99
+ mac-address 0004.9a4d.7d03
+ ip address 192.168.99.3 255.255.255.0
+ ip helper-address 192.168.99.2
+ standby 99 ip 192.168.99.1
+ standby 99 priority 90
+!
+router ospf 1
+ router-id 2.2.2.2
+ log-adjacency-changes
+ network 10.1.2.0 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.60.0 0.0.0.255 area 0
+ network 192.168.99.0 0.0.0.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
