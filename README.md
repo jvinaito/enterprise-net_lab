@@ -72,5 +72,5 @@ Laptop1 phân giải tên miền và tải thành công trang web nội bộ qua
 │   ├── 03_dhcp_client.png
 │   ├── 04_ping_test.png
 │   └── 05_web_access.png
-├── Enterprise_Campus_Network.pkt
+├── lab.pkt
 └── README.md
