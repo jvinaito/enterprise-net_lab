@@ -1,7 +1,7 @@
 # enterprise-net_lab# Enterprise Campus Network Infrastructure with WLC & High Availability
 
 Triển khai mô hình hạ tầng mạng doanh nghiệp chuẩn quy mô Enterprise Campus trên nền tảng Cisco Packet Tracer, tích hợp định tuyến đa vùng, dự phòng Gateway HSRP và giải pháp quản trị mạng không dây tập trung (Cisco WLC & Lightweight AP).
-<img width="661" height="636" alt="Screenshot 2026-10-01 225731" src="https://github.com/user-attachments/assets/29f07331-09dc-4038-b45f-da22ac92256e" />
+<img width="623" height="658" alt="image" src="https://github.com/user-attachments/assets/763505a8-e0f8-4542-b769-d20fd67f326e" />
 
 ---
 
